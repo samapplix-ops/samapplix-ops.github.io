@@ -1,0 +1,295 @@
+/* Paper, ink and lilac - the palette of the page Grok drafted, which the author liked - with the
+   two typefaces it asked Google for, served from this site instead so that no visitor's address
+   goes to a third party. */
+:root {
+  --paper: #f3eadb;
+  --paper-deep: #e7d8c0;
+  --card: #fffaf2;
+  --ink: #2a2318;
+  --muted: #6d6356;
+  --line: #d9ccb6;
+  --lilac: #7b8ce8;
+  --lilac-deep: #4453b8;
+  --lilac-soft: #e8ebfb;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans: "Nunito", "Avenir Next", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font: 500 17px/1.6 var(--sans);
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #efe4d0 0%, transparent 55%),
+    radial-gradient(900px 400px at 110% 8%, #e4e8f8 0%, transparent 50%),
+    var(--paper);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+a { color: inherit; }
+b { font-weight: 800; }
+
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+/* ---- header ---- */
+
+.top { border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 12px; min-height: 78px; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.logo img { width: 42px; height: 42px; border-radius: 11px; }
+
+nav { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--muted);
+}
+nav a:hover { color: var(--ink); background: var(--card); }
+
+.lang {
+  margin-left: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: 800 15px var(--sans);
+  cursor: pointer;
+}
+.lang:hover { border-color: var(--lilac); }
+
+/* ---- hero ---- */
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lilac-deep);
+}
+
+.hero h1 { font-size: clamp(42px, 6.2vw, 76px); line-height: 1.04; }
+
+.lead {
+  margin: 22px 0 32px;
+  max-width: 33em;
+  font-size: clamp(18px, 1.9vw, 20px);
+  color: var(--muted);
+}
+
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 26px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.btn.primary { background: var(--lilac-deep); color: var(--card); box-shadow: 0 14px 30px -14px var(--lilac-deep); }
+.btn.primary:hover { background: #3a48a3; }
+.btn.ghost { border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+.btn.ghost:hover { border-color: var(--lilac); }
+
+/* Two real screenshots of the app, one leaning on the other, and the app's own card in front. */
+.stage {
+  position: relative;
+  height: 560px;
+  border-radius: 32px;
+  background: linear-gradient(160deg, #eadfca 0%, #e0e4f5 100%);
+  overflow: hidden;
+}
+.phone {
+  position: absolute;
+  width: 220px;
+  aspect-ratio: 540 / 1200;
+  border: 9px solid #231e17;
+  border-radius: 36px;
+  background: #231e17;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -24px rgba(42, 35, 24, 0.5);
+}
+.phone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 27px; }
+.phone.front { left: 13%; top: 30px; transform: rotate(-4deg); z-index: 2; }
+.phone.back { right: 11%; top: 74px; transform: rotate(5deg); }
+
+.appcard {
+  position: absolute;
+  z-index: 3;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px 14px 14px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: 0 18px 40px -20px rgba(42, 35, 24, 0.45);
+}
+.appcard img { width: 64px; height: 64px; border-radius: 16px; flex: none; }
+.appcard .eyebrow { margin: 0 0 2px; font-size: 11px; letter-spacing: 0.14em; }
+.appcard strong { display: block; font-family: var(--display); font-size: 19px; font-weight: 600; line-height: 1.2; }
+.appcard span { font-size: 14px; color: var(--muted); }
+
+/* ---- three things ---- */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-bottom: 88px;
+}
+.feature {
+  padding: 26px 28px 28px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--card);
+}
+.feature svg { width: 26px; height: 26px; color: var(--lilac-deep); }
+.feature h3 { margin: 14px 0 8px; font-size: 24px; }
+.feature p { margin: 0; color: var(--muted); font-size: 16px; }
+
+/* ---- the apps ---- */
+
+.section-head { max-width: 40em; margin-bottom: 28px; }
+.section-head h2 { font-size: clamp(32px, 4.4vw, 48px); line-height: 1.1; }
+.section-head .sub { margin: 12px 0 0; color: var(--muted); font-size: 18px; }
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-bottom: 88px;
+}
+.app {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--card);
+}
+/* Play draws every icon inside the same rounded square, and so does this page. */
+.app > img { flex: none; width: 84px; height: 84px; border-radius: 22%; box-shadow: 0 2px 8px rgba(42, 35, 24, 0.14); }
+.app h3 { font-size: 23px; line-height: 1.2; }
+.app p { margin: 8px 0 16px; color: var(--muted); font-size: 16px; }
+.app .tag {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--lilac-soft);
+  color: var(--lilac-deep);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.app .btn { min-height: 44px; padding: 0 20px; font-size: 15px; }
+
+/* ---- for parents ---- */
+
+.parents {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  padding: 52px clamp(24px, 5vw, 60px);
+  border-radius: 32px;
+  background: var(--lilac-deep);
+  color: var(--card);
+}
+.parents .eyebrow { color: var(--lilac-soft); }
+.parents h2 { font-size: clamp(32px, 4.2vw, 46px); line-height: 1.1; }
+.parents ul { margin: 0; padding: 0; list-style: none; }
+.parents li { padding: 14px 0; border-bottom: 1px solid rgba(255, 250, 242, 0.22); }
+.parents li:first-child { padding-top: 0; }
+.parents .btn { margin-top: 24px; background: var(--card); color: var(--lilac-deep); }
+
+/* ---- footer ---- */
+
+footer { padding: 40px 0 56px; color: var(--muted); font-size: 15px; }
+footer p { margin: 6px 0; }
+footer a { font-weight: 700; }
+
+/* ---- the legal pages ---- */
+
+.doc {
+  max-width: 820px;
+  margin: 48px auto 0;
+  padding: 36px clamp(20px, 5vw, 56px) 40px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--card);
+}
+.doc h1 { margin-bottom: 18px; font-size: clamp(34px, 5vw, 46px); line-height: 1.1; }
+.doc h2 { margin: 28px 0 8px; font-size: 22px; }
+.doc p { margin: 0 0 14px; }
+.doc .caps { font-weight: 800; }
+
+/* ---- narrower screens ---- */
+
+@media (max-width: 920px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 36px; padding-top: 40px; }
+  .features, .apps { grid-template-columns: 1fr; }
+  .parents { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 640px) {
+  nav a.opt { display: none; }
+  .stage { height: 470px; }
+  .phone { width: 176px; border-width: 7px; border-radius: 30px; }
+  .phone img { border-radius: 23px; }
+  .phone.front { left: 8%; }
+  .phone.back { right: 6%; }
+  .app { padding: 20px; gap: 16px; }
+  .app > img { width: 64px; height: 64px; }
+}

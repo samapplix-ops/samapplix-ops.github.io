@@ -9,9 +9,15 @@ still showed Baby Animal and FB Photo Backup, and `sites.google.com/view/samappl
 
 ## Two addresses Play depends on
 
-- **`privacy.html` is the privacy policy registered in Play Console for all four apps**, and an app
-  for children must have one that answers. Never rename it or move it.
-- The site root is the "Website" of the four store listings.
+- **`privacy.html` is to become the privacy policy registered in Play Console for all four apps** -
+  FirstWords with version 6, which needs a new paragraph anyway, and each sister app with its next
+  update, because changing the address sends an app back to review. Until then Play still points at
+  the Google Sites page, which has to stay exactly as it is, text and all: an address registered as
+  a privacy policy has to show the policy, not a link to it. Once registered, never rename or move
+  `privacy.html`.
+- The site root is the "Website" of the store listings. The developer account keeps the old Google
+  Sites address, which Play shows as verified; moving it would mean verifying this site, which is a
+  file or a meta tag added here.
 
 ## The privacy policy is the author's legal text
 

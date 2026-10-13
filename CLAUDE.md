@@ -10,24 +10,26 @@ still showed Baby Animal and FB Photo Backup, and `sites.google.com/view/samappl
 ## Two addresses Play depends on
 
 - **`privacy.html` is to become the privacy policy registered in Play Console for all four apps** -
-  FirstWords with version 6, which needs a new paragraph anyway, and each sister app with its next
-  update, because changing the address sends an app back to review. Until then Play still points at
-  the Google Sites page, which has to stay exactly as it is, text and all: an address registered as
-  a privacy policy has to show the policy, not a link to it. Once registered, never rename or move
-  `privacy.html`.
+  FirstWords with version 7, the first on the production track to carry the microphone, and each
+  sister app with its next update, because changing the address sends an app back to review. Until
+  then Play still points at the Google Sites page, which has to stay exactly as it is, text and all:
+  an address registered as a privacy policy has to show the policy, not a link to it. Once
+  registered, never rename or move `privacy.html`.
 - The site root is the "Website" of the store listings. The developer account keeps the old Google
   Sites address, which Play shows as verified; moving it would mean verifying this site, which is a
   file or a meta tag added here.
 
 ## The privacy policy is the author's legal text
 
-`privacy.html` and `terms.html` are the Google Sites text word for word, only split in two. They
-change when an app changes what it does, and two such changes are already known:
+`privacy.html` and `terms.html` began as the Google Sites text word for word, only split in two.
+They change when an app changes what it does:
 
+- **the microphone section went in on 13 October 2026**, for FirstWords recording the family's
+  voice (`RECORD_AUDIO`), with "Last updated: October 2026" at the top. From then on `privacy.html`
+  and the Google Sites page differ by that section, which is right: the sister apps still point at
+  Google Sites and record nothing;
 - the policy says nothing about advertising, which BabyAnimal and MemoryAnimal still carry, and
-  CarSoundKids too until its 3.0 is live;
-- FirstWords version 6 is planned to record the family's voice (`RECORD_AUDIO`), which needs a
-  paragraph of its own.
+  CarSoundKids too until its 3.0 is live.
 
 A changed policy should say when it changed.
 
